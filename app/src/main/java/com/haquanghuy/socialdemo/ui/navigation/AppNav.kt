@@ -1,6 +1,8 @@
 package com.haquanghuy.socialdemo.ui.navigation
 
 import android.content.Intent
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -13,13 +15,15 @@ import com.haquanghuy.socialdemo.ui.home.HomeScreen
 import com.haquanghuy.socialdemo.ui.onboard.OnboardScreen
 import com.haquanghuy.socialdemo.ui.userdetail.UserDetailScreen
 
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController,
 ) {
     fun onBack() {
-        navController.popBackStack()
+        navController.navigateUp()
+//        navController.popBackStack()
     }
     NavHost(
         navController = navController,
