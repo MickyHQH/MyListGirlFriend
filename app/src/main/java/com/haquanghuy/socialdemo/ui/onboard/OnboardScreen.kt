@@ -56,8 +56,6 @@ fun OnboardScreen(
             ElevatedButton(onClick = {
                 if (postNotifyPermissionState.status.isGranted) {
                     onGotoHome()
-                } else if (postNotifyPermissionState.status.shouldShowRationale) {
-                    Toast.makeText(context, "The post notification is important for this app. Please grant the permission.", Toast.LENGTH_LONG).show()
                 } else {
                     postNotifyPermissionState.launchPermissionRequest()
                 }
