@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="project_id">social_demo</string>
+    <string name="default_notification_channel_id">social_demo_channel_id</string>
+    <string name="default_notification_channel_name">Social_demo</string>
+</resources>
